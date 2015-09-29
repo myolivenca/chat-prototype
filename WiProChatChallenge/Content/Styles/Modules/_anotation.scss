@@ -1,0 +1,40 @@
+.Anotation{
+    width: 100%;
+    padding: 15px;
+    background-color: darken($color-positive, 3%);
+    position:relative;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 3px;
+        height: 100%;
+        background-color: darken($color-positive, 25%);
+    }
+    &.alert{
+        background-color: lighten($color-alert, 35%);
+        &:after{
+            background-color: $color-alert;
+        }
+    }
+    &.info{
+        background-color: lighten($color-info, 35%);
+        &:after{
+            background-color: $color-info;
+        }
+    }
+    &.warning{
+        background-color: lighten($color-warning, 35%);
+        &:after{
+            background-color: $color-warning;
+        }
+    }
+    &.success{
+        background-color: lighten($color-success, 35%);
+        &:after{
+            background-color: $color-success;
+        }
+    }
+}

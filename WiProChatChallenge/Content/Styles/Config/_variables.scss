@@ -1,0 +1,121 @@
+//######################################################
+//FONT FAMILIES
+//######################################################
+$font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+
+//######################################################
+//SIZES
+//######################################################
+
+$base-min-width: 320px;
+$base-max-width: 1200px;
+
+$base-font-size: 16px;
+
+
+/* for btn- and txt- sizes attributes */
+$element-sizes: (
+    xsmall: (-5, 2px 3px), 
+    small: (-2, 5px 10px),
+    large: (6, 10px 25px),
+    xlarge: (8, 15px 30px)
+);//(size relative to base-font-size, padding)
+
+
+
+
+
+
+//######################################################
+//COLORS
+//######################################################
+$color-link: #18c0cf;
+$color-input-select : #69a3b2;
+$color-link-nav: #7ca37f;
+
+$color-positive: #fff; //white
+$color-negative: #000; //black
+
+$color-placeholder: lighten($color-negative, 70%); // color for placeholders
+
+$color-impact: #e16399; // pink
+$color-primary: white; // 
+$color-secondary: #52b3a6; // green
+
+$color-dynamic-nav: #469ceb;  //blue
+
+$color-alert: #ddbe34;
+$color-warning: #d92525;
+$color-success: #4ab425;
+$color-info: #0fb0ba;
+
+$txt-colors: (
+    impact: $color-impact, 
+    primary: $color-primary,
+    secondary: $color-secondary,
+    alert: $color-alert,
+    warning: $color-warning,
+    success: $color-success,
+    info: $color-info,
+);
+
+
+//######################################################
+//BUTTONS Attributes
+//######################################################
+/* main attributes */
+$button-attr: (
+    background: transparent none,
+    border: 2px solid $color-positive,
+    border-radius: 8px,
+    color: $color-positive,
+    display: inline-block,
+    font-weight: 400,
+    text-decoration: none,
+    transition: background-color ease 200ms,
+    -webkit-appearance: none
+);
+
+/* button color types */
+$button-colors: (
+    impact: ( $color-positive, $color-impact, $color-positive, transparent),
+    primary: ($color-impact, $color-primary, $color-impact, transparent),
+    secondary: ($color-positive, $color-secondary, $color-secondary, transparent),
+    invert: ($color-negative, $color-positive, darken($color-positive,10%), darken($color-positive,10%))
+);/* color, bkcolor, bordercolor, hovercolor  */
+
+//######################################################
+//FORM
+//######################################################
+
+//attributes
+$form-input-attr:(
+    border-radius: 4px,
+    border-color: #ebe7df,
+    border-width: 3px,
+    border-style: solid,
+    box-sizing: border-box,
+    font-size: 18px,
+    font-weight: 200,
+    padding: 10px,
+    transition: border-color ease 500ms,
+    width: 100%,
+    font-family: (Raleway, sans-serif)
+);
+//colors
+$form-color-focus: #6b9b00;
+
+//######################################################
+//COUNTER
+//######################################################
+$counter-offset : 50px;
+
+//######################################################
+//RESPONSIVE
+//######################################################
+
+$break-xlarge : $base-max-width + 50;
+$break-medium : 970px;
+$break-small: 750px;
+$break-xsmall : 520px;
+$break-tiny: 320px;

@@ -1,0 +1,31 @@
+﻿<div class="Chat">
+    <div class="container" ng-controller="ChatCtrl as vm">
+        <p>&nbsp;</p>
+        <div class="hdr-wrpp">
+            <div class="float-lft icon-wrpp"><i class="icon-bubble"></i>&nbsp;<span>Chat</span></div>
+            <div class="float-rgt"><a href="" class="btn"><i class="icon-video-camera"></i>&nbsp;Video call</a></div>
+            <div class="clear"></div>
+        </div>
+        <div class="ctn-wrpp">
+            <div class="message" ng-repeat="block in vm.chat" ng-class="block.type">
+                <div chat-message block="block"></div>
+            </div>
+            
+        </div>
+        <div class="ftr-wrpp">
+            <div class="bt-wrpp">
+                <a href="" class="btn btn-primary btn-icons"><i class="icon-folder-open"></i></a>&nbsp;<a href="" class="btn btn-primary btn-icons"><i class="icon-camera"></i></a>
+            </div>
+            <div class="input-wrpp">
+                <div class="form-block">
+                    <input type="text" placeholder="Type your message here" ng-model="vm.text" ng-class="{'input-validation-error': vm.error}" />
+                    <span class="validation-error" ng-if="vm.error">you need to provide some text</span>
+                </div>
+            </div>
+            <div class="send-wrpp">
+                <a href="" class="btn btn-impact btn-large" ng-click="vm.addMessage()"><span class="mobile-no">Send Message</span><i class="icon-envelop mobile-on"></i></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

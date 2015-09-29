@@ -1,0 +1,47 @@
+.btn {
+    @each $attr, $values in $button-attr {
+        #{$attr} : $values; 
+    }
+    @include font-size(0, 5px 8px);
+    &:hover {
+        background: $color-impact none;
+        text-decoration: none;
+        color: $color-positive;
+    }
+}
+
+/* add a right padd */
+.btn-mrg{
+    margin-right: 10px;
+}
+    
+/* create button sizes */
+@each $name, $values in $element-sizes {
+    $sizes : nth($values, 1);
+    $padding : nth($values, 2);
+    .btn-#{$name}{
+        @include font-size($sizes, $padding);
+    }
+}
+.btn-large, .btn-xlarge{
+	border-width: 4px
+}
+.btn-icons{
+	border-radius:30px;
+}
+/* create button color types */
+@each $name, $values in $button-colors {
+    $color: nth($values, 1);
+    $bkcolor : nth($values, 2);
+    $bdrcolor : nth($values, 3);
+    $hover: nth($values, 4);
+    .btn-#{$name}{
+        background-color: $bkcolor;
+        border-color: $bdrcolor;
+        color: $color; 
+        &:hover{
+            background-color: $hover;
+            color: $bkcolor;
+        }
+    }
+}

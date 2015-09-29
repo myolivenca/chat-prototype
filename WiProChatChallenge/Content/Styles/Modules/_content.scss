@@ -1,0 +1,9 @@
+.Content{
+    padding: 3% 0;
+    & hr{
+        height:3px;
+        width: 100%;
+        background-color: darken($color-positive, 5%);
+        border: 0px;
+    }
+}

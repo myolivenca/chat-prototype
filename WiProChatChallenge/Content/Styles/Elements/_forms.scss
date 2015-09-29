@@ -1,0 +1,158 @@
+/*
+######################################################
+FORMS
+######################################################
+*/
+/* do not group these rules */
+*::-webkit-input-placeholder {
+  color: $color-placeholder;
+}
+*:-moz-placeholder {
+  color: $color-placeholder;
+}
+*:-ms-input-placeholder { /* IE10+ */
+  color: $color-placeholder;
+}
+
+.form-block {
+    margin: 7px 0 0;
+    position: relative;
+    & .placeholder{
+        display: none;
+        font-weight: 700;
+    }
+    & label{
+        display: block;
+        font-weight: 700;
+        margin-bottom: 5px;
+        &.placeholder{
+            display: none;
+        }
+    }
+
+    // inputs
+    & input[type="text"], & input[type="password"], & select, & textarea{
+        @each $attr, $values in $form-input-attr {
+            #{$attr} : $values; 
+        }
+        resize: none;
+        
+        &:focus{
+            background-color: white;
+            border-color: $form-color-focus;
+        }
+        &.input-validation-error, &.validation-error{
+            border-color: #df3b3b;
+        }
+        &:focus.input-validation-error, &:focus.validation-error{
+            border-color: #c90909;
+        }
+        
+    }
+    & .radio-wrpp{
+        & input[type="checkbox"], & input[type="radio"]{
+            display: inline-block;
+            cursor: pointer;
+            
+        }
+        & span.radio-label{
+            margin-left: 20px;
+            display: block;
+            margin-top: -19px;
+            font-weight: normal;
+        }
+        & label{
+            cursor: pointer;
+        }
+    }
+
+    //error fields
+    & .field-validation-error, & span.validation-error{
+        background-color: #df3b3b;
+        border-radius: 0 0 3px 3px;
+        box-sizing: border-box;
+        color: white;
+        display: block;
+        margin: -3px 0 3px;
+        padding: 13px 20px; 
+    }
+}
+.validation-summary-errors {
+    border-radius: 4px;
+    background-color: #df3b3b;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    padding: 13px 20px;
+}
+
+/*
+#############################
+TOOLTIP
+#############################
+*/
+.tooltip {
+    display: block;
+    position: relative;
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    &.active{
+        z-index: 10;
+        & .tooltip-content{
+            pointer-events: auto;
+            opacity: 1;
+            -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+            transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+        }
+    }
+
+}
+
+.tooltip-content {
+    @include font-size(-3);
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+    margin: 0;
+    text-align: left;
+    box-shadow: -5px -5px 15px rgba(48,54,61,0.2);
+    background: rgba(lighten($color-negative, 10%),0.9);
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+    width: 300px;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scale3d(0.7,0.3,1);
+    transform: scale3d(0.7,0.3,1);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    & .tooltip-text{
+        color: white;
+        padding: 10px;
+        display: inline-block;
+    }
+    &:after, &:before{
+        content: '';
+        display: table;
+    }
+    &:after{
+        content: '';
+        top: 100%;
+        left: 15px;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-top-color: #2a3035;
+        border-top-color: rgba(0,0,0,0.9);
+        border-width: 5px;
+        margin-left: -5px;
+    }
+}

@@ -1,0 +1,128 @@
+.Chat{
+	.container{
+		background: white;
+		min-height: 500px;
+		padding: 0 15px;
+		padding-bottom: 30px;
+	}
+	.hdr-wrpp{
+		background-color: $color-secondary;
+		min-height: 50px;
+		border-radius: 20px 20px 0 0;
+		padding: 30px 15px;
+		color: $color-positive;
+		.icon-wrpp{
+			padding-top: 8px;
+			font-size: 20px;
+		}
+	}
+	.ctn-wrpp{
+		background-color: #f0f8ff;
+		min-height: 50px;
+		border: 1px solid darken($color-positive, 15%);
+		border-top: 0px;
+		border-bottom: 0px;
+		padding: 20px;
+		.message{
+			border-bottom: 1px dashed darken($color-positive, 20%);
+			padding: 20px 0;
+			position: relative;
+			.avatar{
+				display: inline-block;
+				width: 55px;
+				height: 55px;
+				float: left;
+				border-radius: 55px;
+				background: transparent url('/Content/Images/agent_chat.png') 50% 50% no-repeat;
+				overflow: hidden;
+			}
+			.txt-wrpp{
+				display: block;
+				margin-right: 20px;
+				margin-left: 70px;
+				p{
+					color: lighten($color-negative, 30%);
+					&.name{
+						font-weight: 600;
+						color: $color-negative;
+					}
+				}
+			}
+			.time-wrpp{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				font-style: italic;
+				color: lighten($color-negative, 60%);
+				span{
+					font-size: 11px;
+				}
+			}
+			&:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			&.user{
+				.avatar{
+					float: right;
+					background-image: url('/Content/Images/customer_chat.png')
+				}
+				.txt-wrpp{
+					margin-right: 70px;
+					margin-left: 20px;
+					p.name{
+						text-align: right;
+					}
+				}
+				.time-wrpp{
+					left: 20px;
+					right: auto;
+				}
+			}
+		}
+	}
+	.ftr-wrpp{
+		background-color: darken($color-positive, 6%);
+		min-height: 50px;
+		border: 1px solid darken($color-positive, 15%);
+		border-radius: 0 0 20px 20px;
+		position: relative;
+		padding: 20px;
+		.bt-wrpp{
+			float: left;
+			width: 25%;
+			.btn{
+				@include font-size(14, 10px 13px);
+			}
+			
+		}
+		.input-wrpp{
+			float: left;
+			width: 50%;
+		}
+		.send-wrpp{
+			float: right;
+			width: 25%;
+			text-align: right;
+			margin-top: 3px;
+			.btn{
+				text-align: center;
+			}
+		}
+		@media screen and (max-width : $break-small) {
+			.bt-wrpp{
+				text-align:center;
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.input-wrpp{
+				width: 70%;
+			}
+			.send-wrpp{
+				margin-top: 5px;
+				width: 30%;
+			}
+		}
+	}
+}

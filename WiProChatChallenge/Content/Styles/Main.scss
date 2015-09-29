@@ -1,0 +1,37 @@
+/*
+#########################################################
+PEDRO COPYRIGHT 2015
+MAIN OOCSS via Sass by Pedro Olivenca
+#########################################################
+*/
+/* CONFIG */
+@import 'Config/_variables'; //main variables
+@import 'Config/_mixins'; //custom mixins
+@import 'Config/_reset'; //reset browsers
+
+/* FONTS */
+@import 'Elements/_fontIcomoon';
+
+/* VENDOR STYLES */
+@import 'Vendor/_angular'; //parallax specific
+
+/* ELEMENTS */
+@import 'Elements/_utils'; // useful quick/commom classes
+@import 'Elements/_grid'; //grid structure
+@import 'Elements/_buttons'; //grid structure
+@import 'Elements/_forms'; //default forms and tooltips
+@import 'Elements/_tables'; //tables 
+
+/* MODULES */
+@import 'Modules/_anotation'; //Anotation module
+@import 'Modules/_alerttoaster'; //Anotation module
+@import 'Modules/_modal'; //Modal module
+@import 'Modules/_navigation'; //navigation module
+@import 'Modules/_hero'; //hero module
+@import 'Modules/_chat'; //hero module
+@import 'Modules/_content'; //Content module
+
+
+
+/* RESPONSIVE */
+@import '_responsive';

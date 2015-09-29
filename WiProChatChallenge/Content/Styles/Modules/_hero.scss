@@ -1,0 +1,26 @@
+.Hero{
+	text-align: center;
+	.container{
+		background: transparent url('/Content/Images/hero.jpg') 50% 50% no-repeat;
+		background-size: cover;
+		min-height: 500px;
+		padding-bottom: 30px;
+	}
+	.txt-wrpp{
+		padding: 20px;
+		background-color: rgba($color-negative, 0.2);
+		color: $color-positive;
+		display: block;
+		margin: 0 auto;
+		max-width: 80%;
+		@media screen and (max-width : $break-small) {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	@media screen and (max-width : $break-small) {
+		.btn{
+			display: block;
+		}
+	}
+}

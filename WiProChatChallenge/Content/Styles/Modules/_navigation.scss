@@ -1,0 +1,128 @@
+.Navigation{
+	.container{
+		background-color: $color-positive;
+		@media screen and (max-width : $break-xlarge) {
+			padding: 0;
+		}
+	}
+    &.dynamic-nav{// DINAMIC NAVIGATION
+		& ul.pre-nav{
+            float: right;
+			margin-top: 20px;
+			li{
+				float: left;
+				margin-right: 20px;
+				a{
+					color: darken($color-positive, 50%);
+					@include font-size(25);
+					&:hover{
+						color: $color-dynamic-nav;
+					}
+				}
+				&.button{
+					border: 1px solid darken($color-positive, 15%);
+					border-radius: 3px;
+					padding: 0 15px;
+				}
+			}
+			
+        }
+		& ul.nav{
+			display: table;
+			background-color: $color-dynamic-nav;
+			width: 100%;
+			text-align: center;
+			border-bottom: 1px solid $color-positive;
+			li{
+				text-align: center;
+				display: inline-block;
+				width: 25%;
+				border-left: 1px solid $color-positive;
+				&:first-child{
+					border-left: 0px;
+				}
+				a{
+					display: block;
+					color: $color-positive;
+					@include font-size(5);
+					padding: 10px 0;
+					&:hover{
+						color: $color-positive;
+						background-color: lighten($color-dynamic-nav, 5%);
+					}
+					[class*='icon-']{
+						@include font-size(25);
+					}
+					@media screen and (max-width : $break-small) {
+						@include font-size(0);
+						[class*='icon-']{
+							@include font-size(18);
+						}
+					}
+				}
+				&.button{
+					border: 1px solid darken($color-positive, 15%);
+					border-radius: 3px;
+					padding: 0 15px;
+				}
+			}
+			
+        }
+        &.fixed{ // ON FIXED NAV
+            position: fixed;
+            top:0;
+            left:0;
+            background-color: rgba($color-positive, 0.95);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba($color-negative, 0.05);
+            z-index:10; 
+        }
+		.brand{
+			max-width: 100%;
+			max-height: 100%;
+			float: left;
+		}
+		@media screen and (max-width : $break-small) {
+			.pre-hdr{
+				height: 70px;
+				padding: 12px 0;
+			}
+			ul.pre-nav{
+				float: right;
+				margin-top: 0px;
+				li{
+					a{
+						@include font-size(18);
+					}
+					&.button{
+						padding: 0 8px;
+					}
+				}
+			}
+		}
+    }
+
+    &.back-nav{ // BACK NAVIGATION
+        background-color: darken($color-positive, 4%);
+        padding: 10px 0;
+        & .bread{
+            color: lighten($color-negative, 65%);
+        }
+    }
+
+	.pre-hdr{
+		height: 120px;
+		padding: 12px 0;
+		a.home{
+			height: 96px;
+			width: 96px;
+			background-color: darken($color-positive, 10%);
+			display: block;
+			float: left;
+			text-align: center;
+			@include font-size(20);
+			line-height: 90px;
+			color: darken($color-positive, 50%);
+		}
+	}
+}

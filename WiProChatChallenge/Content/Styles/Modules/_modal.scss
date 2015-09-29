@@ -1,0 +1,102 @@
+.ModalOverlay{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background: transparent url('../Images/bg_diagonals.png');
+    z-index: 15;
+    opacity: 0.5;    
+}
+.ModalToaster{
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    z-index: 16;
+    top:0;
+    background-color: $color-positive;
+    transition: ease 500ms top, ease 500ms margin-top;
+    box-shadow: 0 0 4px rgba($color-negative, 0.2);
+    & h2{
+        padding: 10px 20px;
+        border-bottom: 1px dotted darken($color-positive,5%);
+        background-color: darken($color-positive, 2%);
+        &:after{
+            content: '';
+            display: block;
+            width: 30px;
+            height: 8px;
+            top: 0;
+            left: 20px;
+            position: absolute;
+            background-color: darken($color-positive,10%);
+        }
+    }
+    & .modal-ctn{
+        padding: 10px 20px;
+    }
+    & .modal-ftr{
+        padding :10px 20px;
+        border-top: 1px dotted darken($color-positive,5%);
+        background-color: darken($color-positive, 2%);
+    }
+    &:before {
+        background: url("../Images/shadow-right.png") bottom center no-repeat;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 15px;
+        position: absolute;
+        bottom: -9px;
+        right: 0px;
+    }
+    &:after {
+        background: url("../Images/shadow-left.png") bottom left no-repeat;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 15px;
+        position: absolute;
+        bottom: -11px;
+        left: 0px;
+    }
+
+    &.state-success{
+        & h2{
+            border-color: $color-success;
+            &:after{
+                background-color: $color-success;
+            }
+        }
+    }
+    &.state-info{
+        & h2{
+            border-color: $color-info;
+            &:after{
+                background-color: $color-info;
+            }
+        }
+    }
+    &.state-warning{
+        & h2{
+            border-color:$color-warning;
+            &:after{
+                background-color: $color-warning;
+            }
+        }
+    }
+    &.state-alert{
+        & h2{
+            border-color: $color-alert;
+            &:after{
+                background-color: $color-alert;
+            }
+        }
+    }
+    @media screen and (max-width : $break-small) {
+        width : 100%;
+        left: 0;
+        margin-left: 0px;
+    }
+}

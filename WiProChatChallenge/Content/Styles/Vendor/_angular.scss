@@ -1,0 +1,115 @@
+.MainView {
+    position: relative;
+    width: 100%;
+
+    & .angular-view {
+        position: relative;
+        z-index: 1;
+
+        &.ng-leave {
+            animation-name: fadeOutUp;
+            animation-duration: 200ms;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+            backface-visibility: hidden;
+        }
+
+        &.ng-enter {
+            animation-name: fadeInDown;
+            animation-duration: 200ms;
+            animation-delay: 500ms;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+            backface-visibility: hidden;
+        }
+    }
+}
+
+@-webkit-keyframes fadeOutUp { 
+    0% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+    100% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+} 
+@keyframes fadeOutUp { 
+    0% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+} 
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.animate-enter, 
+.animate-leave
+{ 
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+} 
+ 
+.animate-enter.animate-enter-active, 
+.animate-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+
+
+/* REPEATER ANIMATION */
+.animate-repeat {
+    -webkit-transition: 200ms linear opacity;
+    transition: 200ms linear opacity;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
