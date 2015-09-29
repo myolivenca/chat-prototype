@@ -9,9 +9,7 @@ namespace WiProChatChallenge
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/vendor").Include(
-                        "~/Scripts/Vendor/modernizr-*",        
-                        "~/Scripts/Vendor/jquery-{version}.js",
-                        "~/Scripts/Vendor/jquery-ui-{version}.js",
+                        "~/Scripts/Vendor/modernizr-*",
                         "~/Scripts/Vendor/moment.js",
                         "~/Scripts/Vendor/nicescroll.js",
                         "~/Scripts/App/angular.1.3.16.js",        
