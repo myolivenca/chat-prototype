@@ -150,8 +150,6 @@
     <Content Include="Scripts\App\Chat\chat.controller.js" />
     <Content Include="Scripts\App\Chat\message.html" />
     <Content Include="Scripts\App\Route\route.controller.js" />
-    <Content Include="Scripts\Vendor\jquery-2.1.4.js" />
-    <Content Include="Scripts\Vendor\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\Vendor\modernizr-2.6.2.js" />
     <Content Include="Scripts\Vendor\moment.js" />
     <Content Include="Scripts\Vendor\nicescroll.js" />
