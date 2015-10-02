@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+    </style>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,400italic" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="authors" content="Pedro Olivença">
+    <meta name="owner" content="Pedro Olivença">
+    <meta name="title" content="WiPro Challenge">
+    <meta property="description" content="WiPro Challenge">
+    <link rel="icon" href="http://wiprodigitalcom.c.presscdn.com/wp-content/uploads/2014/07/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="http://wiprodigitalcom.c.presscdn.com/wp-content/uploads/2014/07/favicon.png" type="image/x-icon">
+    <title>WiPro Digital Challenge</title>
+    <meta name="description" content="We are an innovation-led, digital transformation partner built for today’s digital challenges. We make extraordinary things happen for brands, businesses and their customers.">
+    <meta property="og:site_name" content="Digital Transformation Partner - Wipro Digital">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wipro Digital">
+    <meta property="og:url" content="http://wiprodigital.com">
+    <meta property="og:description" content="We are an innovation-led, digital transformation partner built for today’s digital challenges. We make extraordinary things happen for brands, businesses and their customers.">
+    <meta property="og:image" content="http://wiprodigitalcom.c.presscdn.com/wp-content/uploads/2014/07/wipro-web2-big-1200.png">
+
+    <link href="/Content/Styles/css?v=ZfvaxE7PQ95ZzwXpuS1xXC_hm_7VREeztRXnlOAftbY1" rel="stylesheet">
+
+    <script src="/bundles/vendor?v=79OwhNK6W5Q55pQ3-NUHXWi48FOybh8tNtbH7XVVEjI1"></script>
+
+</head>
+<body ng-app="app" class="ng-scope">
+    <header>
+        <div class="Navigation dynamic-nav">
+            <div class="container">
+                <div class="pre-hdr">
+                    <img src="/Content/Images/logo.jpg" class="brand">
+                    <a href="#/" class="home mobile-no"><i class="icon-home"></i></a>
+                    <ul class="pre-nav mobile-no">
+                        <li><a href=""><i class="icon-mobile2"></i></a></li>
+                        <li><a href=""><i class="icon-user"></i></a></li>
+                        <li><a href=""><i class="icon-search"></i></a></li>
+                        <li><a href=""><i class="icon-pencil"></i></a></li>
+                    </ul>
+                    <ul class="pre-nav mobile-on">
+                        <li class="button"><a href=""><i class="icon-menu"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="nav">
+                    <li><a href="#/"><i class="icon-home"></i><br>Home</a></li>
+                    <li><a href=""><i class="icon-link"></i><br>Connect</a></li>
+                    <li><a href=""><i class="icon-image"></i><br>Discover</a></li>
+                    <li><a href=""><i class="icon-user"></i><br>Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <div class="MainView ng-scope" ng-controller="routeCtrl">
+        <!-- ngView: undefined --><div class="ng-view angular-view ng-scope">
+            <div class="Chat ng-scope">
+                <div class="container ng-scope" ng-controller="ChatCtrl as vm">
+                    <p>&nbsp;</p>
+                    <div class="hdr-wrpp">
+                        <div class="float-lft icon-wrpp"><i class="icon-bubble"></i>&nbsp;<span>Chat</span></div>
+                        <div class="float-rgt"><a href="" class="btn"><i class="icon-video-camera"></i>&nbsp;Video call</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ctn-wrpp">
+                        <!-- ngRepeat: block in vm.chat --><div class="message ng-scope agent" ng-repeat="block in vm.chat" ng-class="block.type">
+                            <div chat-message="" block="block" class="ng-isolate-scope">
+                                <div class="avatar"></div>
+                                <div class="txt-wrpp">
+                                    <p class="name ng-binding">Joe</p>
+                                    <p class="ng-binding">Hi, I'm Joe and I'll be helping you open your new account today.&lt;br /&gt;To begin with, we will need your registered student number from UCAS please - do you have this to hand?</p>
+                                </div>
+                                <div class="time-wrpp" title="2015-10-02T12:15:21+01:00"><i class="icon-clock"></i>&nbsp;<span class="ng-binding">7 minutes ago</span></div>
+
+                            </div>
+                        </div><!-- end ngRepeat: block in vm.chat --><div class="message ng-scope user" ng-repeat="block in vm.chat" ng-class="block.type">
+                            <div chat-message="" block="block" class="ng-isolate-scope">
+                                <div class="avatar"></div>
+                                <div class="txt-wrpp">
+                                    <p class="name ng-binding">You</p>
+                                    <p class="ng-binding">No probs -  my student number is 453746736. My email address is ellie@mail.com</p>
+                                </div>
+                                <div class="time-wrpp" title="2015-10-02T12:17:21+01:00"><i class="icon-clock"></i>&nbsp;<span class="ng-binding">5 minutes ago</span></div>
+
+                            </div>
+                        </div><!-- end ngRepeat: block in vm.chat -->
+
+                    </div>
+                    <div class="ftr-wrpp">
+                        <div class="bt-wrpp">
+                            <a href="" class="btn btn-primary btn-icons"><i class="icon-folder-open"></i></a>&nbsp;<a href="" class="btn btn-primary btn-icons"><i class="icon-camera"></i></a>
+                        </div>
+                        <div class="input-wrpp">
+                            <div class="form-block">
+                                <input type="text" placeholder="Type your message here" ng-model="vm.text" ng-class="{'input-validation-error': vm.error}" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                                <!-- ngIf: vm.error -->
+                            </div>
+                        </div>
+                        <div class="send-wrpp">
+                            <a href="" class="btn btn-impact btn-large" ng-click="vm.addMessage()"><span class="mobile-no">Send Message</span><i class="icon-envelop mobile-on"></i></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
